@@ -3,7 +3,7 @@ import './App.css';
 import Titles from "./components/Titles";
 import Form from './components/Form';
 import Weather from './components/Weather';
-import keys from './config/key';
+import keys from './config/keys';
 
 class App extends React.Component {
   // constructor(props){
