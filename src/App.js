@@ -1,5 +1,4 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
 import Titles from "./components/Titles";
 import Form from './components/Form';
@@ -27,7 +26,7 @@ class App extends React.Component {
     event.preventDefault()// prevent default action like auto-refresh...
     const city = event.target.elements.city.value;
     const country = event.target.elements.country.value;
-
+    // API: 一个URL + 特定用途的function
     const api_call = await fetch(`http://api.openweathermap.org/data/2.5/weather?q=${city},${country}&appid=${API_KEY}&units=metrics`);
     const data = await api_call.json();
 
