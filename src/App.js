@@ -3,8 +3,7 @@ import './App.css';
 import Titles from "./components/Titles";
 import Form from './components/Form';
 import Weather from './components/Weather';
-
-const API_KEY = "ff39f886db9d3025987db07bc3a330c5";
+import keys from './config/key';
 
 class App extends React.Component {
   // constructor(props){
@@ -27,7 +26,7 @@ class App extends React.Component {
     const city = event.target.elements.city.value;
     const country = event.target.elements.country.value;
     // API: 一个URL + 特定用途的function
-    const api_call = await fetch(`http://api.openweathermap.org/data/2.5/weather?q=${city},${country}&appid=${API_KEY}&units=metrics`);
+    const api_call = await fetch(`http://api.openweathermap.org/data/2.5/weather?q=${city},${country}&appid=${keys.API_KEY}&units=metrics`);
     const data = await api_call.json();
 
     if(city && country){
